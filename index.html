@@ -8,13 +8,18 @@
         <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Oxygen:400,300,700">
         -->
         <link rel="stylesheet" href="style.css">
-        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
     <body>
         <!--
             <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
             <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+                        
+            /*$("#card").flip();
+            $(".content__button").click(function() {
+                $("#card").flip('toggle');
+            });*/
             -->
             <div class="content">
                 <div id="card">
@@ -38,22 +43,6 @@
       <source src="bgmv.mp4" type="video/mp4">
     </video>
     
-    
-    <script>
-            
-            /*$("#card").flip();
-            $(".content__button").click(function() {
-                $("#card").flip('toggle');
-            });*/
-            (function(window, video){
-                var $ = $ || window.jQuery || window.document.querySelector; //?
-                var videoLoadedFunc = function() {
-                    video.play();
-                    video.playbackRate = 0.5;
-                    video.removeEventListener("canplaythrough", this);
-                };
-                video.addEventListener("canplaythrough", videoLoadedFunc); 
-            })(window, document.getElementById("my-video"));
-    </script>
+    <script src="dist/app.js"></script>
     </body>
 </html>
