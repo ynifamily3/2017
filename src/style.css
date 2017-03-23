@@ -1,4 +1,4 @@
-/* 리셋 */
+/* style.css */
 html, body, div, h1, p, a, video {
   margin: 0;
   padding: 0;
@@ -10,7 +10,6 @@ html, body {
 
 body {
   font-size: 16px;
-  /*font-family: "Oxygen", sans-serif;*/
   line-height: 1.5;
 }
 

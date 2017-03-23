@@ -1,5 +1,8 @@
+import './style.css';
+
+document.getElementById("root").innerHTML = require('./contents.html');
+  
 ((window, video) => {
-    var $ = $ || window.jQuery || window.document.querySelector; //?
     var videoLoadedFunc = () => {
         video.play();
         video.playbackRate = 0.5;
