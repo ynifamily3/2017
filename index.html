@@ -40,18 +40,20 @@
     
     
     <script>
-            var $ = $ || window.jQuery;
+            
             /*$("#card").flip();
             $(".content__button").click(function() {
                 $("#card").flip('toggle');
             });*/
-            var video = document.getElementById("my-video");
-
-            video.addEventListener("canplaythrough", function () {
-                video.play();
-                video.playbackRate = 0.5;
-                
-            }); 
+            (function(window, video){
+                var $ = $ || window.jQuery || window.document.querySelector; //?
+                var videoLoadedFunc = function() {
+                    video.play();
+                    video.playbackRate = 0.5;
+                    video.removeEventListener("canplaythrough", this);
+                };
+                video.addEventListener("canplaythrough", videoLoadedFunc); 
+            })(window, document.getElementById("my-video"));
     </script>
     </body>
 </html>
