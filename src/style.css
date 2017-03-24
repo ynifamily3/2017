@@ -134,15 +134,7 @@ body {
   width: auto;
   height: auto;
   overflow: hidden;
-  
-  -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-filter: blur(15px);
-     -moz-filter: blur(15px);
-      -ms-filter: blur(15px);
-       -o-filter: blur(15px);
-          filter: blur(15px);
+  transform: translate(-50%, -50%);
+  filter: blur(15px);
     
 }
