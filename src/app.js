@@ -1,7 +1,5 @@
 import './style.css';
 
-document.getElementById("root").innerHTML = require('./contents.html');
-  
 ((window, video) => {
     var videoLoadedFunc = () => {
         video.play();

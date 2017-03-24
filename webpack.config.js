@@ -1,11 +1,17 @@
 var path = require('path');
-
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+/* https://www.npmjs.com/package/html-webpack-plugin */
 module.exports = {
   entry: './src/app.js',
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist')
   },
+  plugins: [new HtmlWebpackPlugin({
+    title: 'Happy birthday yayoi-chan! 2017 (af)',
+    template: 'src/contents.html', //in
+    filename: '../index.html' //out
+  })],
   module: {
     rules: [
       {
