@@ -73,7 +73,7 @@
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(4);
+var content = __webpack_require__(5);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // add the styles to the DOM
 var update = __webpack_require__(8)(content, {});
@@ -130,7 +130,7 @@ __webpack_require__(0);
         (i[r].q = i[r].q || []).push(arguments);
     }, i[r].l = 1 * new Date();a = s.createElement(o), m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m);
 })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
+var ga = ga || null;
 ga('create', 'UA-75074154-1', 'auto');
 ga('send', 'pageview');
 
@@ -271,8 +271,8 @@ function fromByteArray (uint8) {
 
 
 var base64 = __webpack_require__(2)
-var ieee754 = __webpack_require__(6)
-var isArray = __webpack_require__(7)
+var ieee754 = __webpack_require__(7)
+var isArray = __webpack_require__(4)
 
 exports.Buffer = Buffer
 exports.SlowBuffer = SlowBuffer
@@ -2054,20 +2054,31 @@ function isnan (val) {
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+var toString = {}.toString;
+
+module.exports = Array.isArray || function (arr) {
+  return toString.call(arr) == '[object Array]';
+};
+
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(5)(undefined);
+exports = module.exports = __webpack_require__(6)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "a,body,div,h1,html,p,video{margin:0;padding:0}body,html{height:100%}body{font-size:16px;line-height:1.5}#card{-webkit-perspective:980px;perspective:980px;position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.front{transform-style:preserve-3d;position:absolute;z-index:1;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}.back,.front{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform-style:preserve-3d;height:100%;width:100%}.back{transform-style:preserve-3d;position:relative;z-index:0;-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg)}.front__animation__next{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:absolute;z-index:0;-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}.back__animation__next,.front__animation__next{-webkit-backface-visibility:hidden;backface-visibility:hidden;height:100%;width:100%;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}.back__animation__next{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:relative;z-index:1;-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}.front__animation__forward{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:absolute;z-index:1;-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}.back__animation__forward,.front__animation__forward{-webkit-backface-visibility:hidden;backface-visibility:hidden;height:100%;width:100%;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}.back__animation__forward{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:relative;z-index:0;-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg)}.content{position:relative;top:30%;z-index:2;margin:0 auto;max-width:980px;text-align:center}.content__title{margin-bottom:24px;color:#272727;font-size:44px}.content__contents{margin-bottom:24px;color:#595959;font-size:22px}.content__button{color:#f39938;border:4px solid #f39938}.content__button,.external__button{display:inline-block;margin:0;padding:12px 48px;font-size:22px;text-decoration:none}.external__button{color:#008275;border:4px solid #008275}.external__button__twitter{color:#3cf;border:4px solid #3cf}.video{position:fixed;top:50%;left:50%;z-index:1;min-width:100%;min-height:100%;width:auto;height:auto;overflow:hidden;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-filter:blur(15px);filter:blur(15px)}", ""]);
+exports.push([module.i, "a,body,div,h1,html,p,video{margin:0;padding:0}body,html{height:100%}body{font-size:16px;line-height:1.5}#card{-webkit-perspective:980px;perspective:980px;position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.front{transform-style:preserve-3d;position:absolute;z-index:1;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}.back,.front{-webkit-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform-style:preserve-3d;height:100%;width:100%}.back{transform-style:preserve-3d;position:relative;z-index:0;-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg)}.front__animation__next{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:absolute;z-index:0;-webkit-transform:rotateY(180deg);transform:rotateY(180deg)}.back__animation__next,.front__animation__next{-webkit-backface-visibility:hidden;backface-visibility:hidden;height:100%;width:100%;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}.back__animation__next{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:relative;z-index:1;-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}.front__animation__forward{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:absolute;z-index:1;-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}.back__animation__forward,.front__animation__forward{-webkit-backface-visibility:hidden;backface-visibility:hidden;height:100%;width:100%;-webkit-transition:all .5s ease-out;transition:all .5s ease-out}.back__animation__forward{-webkit-transform-style:preserve-3d;transform-style:preserve-3d;position:relative;z-index:0;-webkit-transform:rotateY(-180deg);transform:rotateY(-180deg)}.content{position:relative;top:30%;z-index:2;margin:0 auto;max-width:980px;text-align:center}.content__title{margin-bottom:24px;color:#272727;font-size:44px}.content__contents{margin-bottom:24px;color:#595959;font-size:22px}.content__button{color:#f39938;border:4px solid #f39938}.content__button,.external__button{display:inline-block;margin:0;padding:12px 48px;font-size:22px;text-decoration:none}.external__button{color:#ace08b;border:4px solid #ace08b}.external__button__twitter{color:#3cf;border:4px solid #3cf}.video{position:fixed;top:50%;left:50%;z-index:1;min-width:100%;min-height:100%;width:auto;height:auto;overflow:hidden;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-filter:blur(15px);filter:blur(15px)}", ""]);
 
 // exports
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(Buffer) {/*
@@ -2149,7 +2160,7 @@ function toComment(sourceMap) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -2236,17 +2247,6 @@ exports.write = function (buffer, value, offset, isLE, mLen, nBytes) {
 
   buffer[offset + i - d] |= s * 128
 }
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-var toString = {}.toString;
-
-module.exports = Array.isArray || function (arr) {
-  return toString.call(arr) == '[object Array]';
-};
 
 
 /***/ }),
