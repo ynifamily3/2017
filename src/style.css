@@ -113,10 +113,15 @@ body {
   display: inline-block;
   margin: 0;
   padding: 12px 48px;
-  color: #c1231d;
+  color: #008275;
   font-size: 22px;
   text-decoration: none;
-  border: solid 4px #b8211c;
+  border: solid 4px #008275;
+}
+
+.external__button__twitter {
+  color: #3cf; 
+  border: solid 4px #3cf;
 }
 
 .video {
