@@ -1,6 +1,6 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-/* https://www.npmjs.com/package/html-webpack-plugin */
+
 module.exports = {
   entry: './src/app.js',
   output: {
