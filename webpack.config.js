@@ -1,8 +1,9 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
 
 module.exports = {
-  entry: './src/app.js',
+  entry: ['babel-polyfill', './src/app.js'],
   output: {
     filename: 'app.js',
     path: path.resolve(__dirname, 'dist')
@@ -11,7 +12,9 @@ module.exports = {
     title: 'Happy birthday yayoi-chan! 2017 (af)',
     template: 'src/contents.html', //in
     filename: '../index.html' //out
-  })],
+  }),
+     new webpack.optimize.UglifyJsPlugin()
+  ],
   module: {
     rules: [
       {
